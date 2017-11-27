@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		183869FB1FC6B89500CA29FE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183869FA1FC6B89500CA29FE /* main.swift */; };
-		18BEC1011FCC113E00D6B07B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1001FCC113E00D6B07B /* Tests.swift */; };
+		18BEC1011FCC113E00D6B07B /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1001FCC113E00D6B07B /* MatrixTests.swift */; };
 		18BEC1061FCC119700D6B07B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183869FA1FC6B89500CA29FE /* main.swift */; };
 		18BEC1081FCC21ED00D6B07B /* DeterministicRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1071FCC21ED00D6B07B /* DeterministicRandom.swift */; };
 		18BEC1091FCC21ED00D6B07B /* DeterministicRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1071FCC21ED00D6B07B /* DeterministicRandom.swift */; };
@@ -16,6 +16,10 @@
 		18BEC10C1FCC22B300D6B07B /* NeuralMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */; };
 		18BEC10E1FCC274F00D6B07B /* DeterministicRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */; };
 		18BEC1101FCC2B8A00D6B07B /* NeuralMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */; };
+		18BEC1121FCC40C100D6B07B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1111FCC40C100D6B07B /* Utils.swift */; };
+		18BEC1141FCC40F200D6B07B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1131FCC40F200D6B07B /* Matrix.swift */; };
+		18BEC1151FCC486200D6B07B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1131FCC40F200D6B07B /* Matrix.swift */; };
+		18BEC1161FCC486500D6B07B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC1111FCC40C100D6B07B /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,12 +38,14 @@
 		183869F71FC6B89500CA29FE /* SimpleNeuralNetwork */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleNeuralNetwork; sourceTree = BUILT_PRODUCTS_DIR; };
 		183869FA1FC6B89500CA29FE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18BEC0FE1FCC113E00D6B07B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BEC1001FCC113E00D6B07B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		18BEC1001FCC113E00D6B07B /* MatrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; };
 		18BEC1021FCC113E00D6B07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BEC1071FCC21ED00D6B07B /* DeterministicRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterministicRandom.swift; sourceTree = "<group>"; };
 		18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralMath.swift; sourceTree = "<group>"; };
 		18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeterministicRandomTests.swift; sourceTree = "<group>"; };
 		18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuralMathTests.swift; sourceTree = "<group>"; };
+		18BEC1111FCC40C100D6B07B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		18BEC1131FCC40F200D6B07B /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 				183869FA1FC6B89500CA29FE /* main.swift */,
 				18BEC1071FCC21ED00D6B07B /* DeterministicRandom.swift */,
 				18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */,
+				18BEC1111FCC40C100D6B07B /* Utils.swift */,
+				18BEC1131FCC40F200D6B07B /* Matrix.swift */,
 			);
 			path = SimpleNeuralNetwork;
 			sourceTree = "<group>";
@@ -91,7 +99,7 @@
 		18BEC0FF1FCC113E00D6B07B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				18BEC1001FCC113E00D6B07B /* Tests.swift */,
+				18BEC1001FCC113E00D6B07B /* MatrixTests.swift */,
 				18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */,
 				18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */,
 				18BEC1021FCC113E00D6B07B /* Info.plist */,
@@ -190,8 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BEC10B1FCC22B300D6B07B /* NeuralMath.swift in Sources */,
+				18BEC1141FCC40F200D6B07B /* Matrix.swift in Sources */,
 				183869FB1FC6B89500CA29FE /* main.swift in Sources */,
 				18BEC1081FCC21ED00D6B07B /* DeterministicRandom.swift in Sources */,
+				18BEC1121FCC40C100D6B07B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BEC1151FCC486200D6B07B /* Matrix.swift in Sources */,
 				18BEC1101FCC2B8A00D6B07B /* NeuralMathTests.swift in Sources */,
 				18BEC10C1FCC22B300D6B07B /* NeuralMath.swift in Sources */,
 				18BEC10E1FCC274F00D6B07B /* DeterministicRandomTests.swift in Sources */,
 				18BEC1061FCC119700D6B07B /* main.swift in Sources */,
 				18BEC1091FCC21ED00D6B07B /* DeterministicRandom.swift in Sources */,
-				18BEC1011FCC113E00D6B07B /* Tests.swift in Sources */,
+				18BEC1011FCC113E00D6B07B /* MatrixTests.swift in Sources */,
+				18BEC1161FCC486500D6B07B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
