@@ -22,6 +22,9 @@
 
 import Foundation
 
+// Useful function in neural networks. Maps every real number into range [0, 1] (every number has its own mapped value).
+// See: https://en.wikipedia.org/wiki/Sigmoid_function
+// Added convenience derivative.
 func sigmoid(_ x: Double, derive: Bool = false) -> Double {
     if derive {
         return x * (1.0 - x)
@@ -29,9 +32,17 @@ func sigmoid(_ x: Double, derive: Bool = false) -> Double {
     return 1.0 / (1.0 + exp(-x))
 }
 
+// Matrix variation of sigmoid function.
 func sigmoid(_ matrix: Matrix, derive: Bool = false) -> Matrix {
     if derive {
         return matrix.map { element, _, _ in element * (1.0 - element) }
     }
     return matrix.map { element, _, _ in 1.0 / (1.0 + exp(-element)) }
+}
+
+// Computes error between learning layer and output data. Only for debugging.
+func absoluteMean(_ matrix: Matrix) -> Double {
+    var sum = 0.0
+    matrix.forEach { element, _, _ in sum += abs(element) }
+    return sum / Double(matrix.data.count * matrix.data[0].count)
 }

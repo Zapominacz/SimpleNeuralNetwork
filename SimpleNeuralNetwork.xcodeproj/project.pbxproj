@@ -15,6 +15,7 @@
 		18BEC10B1FCC22B300D6B07B /* NeuralMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */; };
 		18BEC10C1FCC22B300D6B07B /* NeuralMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */; };
 		18BEC10E1FCC274F00D6B07B /* DeterministicRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */; };
+		18BEC1101FCC2B8A00D6B07B /* NeuralMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 		18BEC1071FCC21ED00D6B07B /* DeterministicRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterministicRandom.swift; sourceTree = "<group>"; };
 		18BEC10A1FCC22B300D6B07B /* NeuralMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralMath.swift; sourceTree = "<group>"; };
 		18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeterministicRandomTests.swift; sourceTree = "<group>"; };
+		18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuralMathTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				18BEC1001FCC113E00D6B07B /* Tests.swift */,
 				18BEC10D1FCC274F00D6B07B /* DeterministicRandomTests.swift */,
+				18BEC10F1FCC2B8A00D6B07B /* NeuralMathTests.swift */,
 				18BEC1021FCC113E00D6B07B /* Info.plist */,
 			);
 			path = Tests;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BEC1101FCC2B8A00D6B07B /* NeuralMathTests.swift in Sources */,
 				18BEC10C1FCC22B300D6B07B /* NeuralMath.swift in Sources */,
 				18BEC10E1FCC274F00D6B07B /* DeterministicRandomTests.swift in Sources */,
 				18BEC1061FCC119700D6B07B /* main.swift in Sources */,

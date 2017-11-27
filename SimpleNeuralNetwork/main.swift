@@ -153,11 +153,7 @@ func + (lhs: Matrix, rhs: Matrix) -> Matrix {
     }
 }
 
-func absoluteMean(_ matrix: Matrix) -> Double {
-    var sum = 0.0
-    matrix.forEach { element, _, _ in sum += abs(element) }
-    return sum / Double(matrix.data.count * matrix.data[0].count)
-}
+
 
 let inputData = Matrix([0, 0, 1, 0], [0, 1, 1, 0], [1, 0, 1, 0], [1, 1, 1, 0])
 let outputData = Matrix([0, 1, 1, 0])
