@@ -22,7 +22,7 @@
 
 import Foundation
 
-infix operator *: MultiplicationPrecedence
+infix operator **: MultiplicationPrecedence
 infix operator -: AdditionPrecedence
 infix operator +: AdditionPrecedence
 
@@ -35,7 +35,7 @@ struct Matrix: CustomStringConvertible, Equatable {
     }
     
     // Data that the matrix holds
-    var data: [[Double]]
+    let data: [[Double]]
     
     init(_ data: [Double]...) {
         self.data = data
@@ -69,27 +69,22 @@ struct Matrix: CustomStringConvertible, Equatable {
     
     // Convenience map for matrix
     func map(_ body: (_ element: Double, _ row: Int, _ col: Int) -> Double) -> Matrix {
-        let width = data.count
-        let height = data[0].count
+        let width = data[0].count
+        let height = data.count
         var newData = self.data
-        (0..<width).forEach { row in
-            (0..<height).forEach { col in
+        (0..<height).forEach { row in
+            (0..<width).forEach { col in
                 newData[row][col] = body(data[row][col], row, col)
             }
         }
         return Matrix(newData)
     }
     
-    // Algebraic dot product, see: https://en.wikipedia.org/wiki/Dot_product
-    func dotProduct(_ other: Matrix) -> Matrix {
-        return self * other.transpose
-    }
-    
     // Creates random matrix with elements in range [0, 1] and specified dimensions
     static func random(width: Int, height: Int) -> Matrix {
         var data = Array<[Double]>(repeating: Array<Double>(repeating: 0, count: width), count: height)
-        (0..<width).forEach { row in
-            (0..<height).forEach { col in
+        (0..<height).forEach { row in
+            (0..<width).forEach { col in
                 data[row][col] = DeterministicRandom.value
             }
         }
@@ -106,6 +101,13 @@ func ==(lhs: Matrix, rhs: Matrix) -> Bool {
 func * (lhs: Double, rhs: Matrix) -> Matrix {
     return rhs.map { element, _, _ in
         return lhs * element
+    }
+}
+
+// Matrix elements multiplication, i.e. multiply element by element
+func ** (lhs: Matrix, rhs: Matrix) -> Matrix {
+    return lhs.map { element, row, col in
+        return element * rhs.data[row][col]
     }
 }
 

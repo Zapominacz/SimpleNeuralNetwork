@@ -50,11 +50,11 @@ class MatrixTests: XCTestCase {
         XCTAssertEqual(matrix.transpose, result, "Transposing returned bad matrix")
     }
     
-    func testDotProduct() {
-        let a = Matrix([1, 2, 4, 5])
-        let b = Matrix([2, 3, 4, 1])
-        print(a.dotProduct(b))
-        XCTAssertEqual(Matrix([29]), a.dotProduct(b), "Dot product bad implemented")
+    func testMatrixElementMultiplication() {
+        let a = Matrix([1, 2], [3, 4])
+        let b = Matrix([1, 2], [3, 4])
+        let result = Matrix([1, 4], [9, 16])
+        XCTAssertEqual(result, a ** b, "Element multiplication is bad implemented")
     }
     
     func testMatrixValueOperations() {
