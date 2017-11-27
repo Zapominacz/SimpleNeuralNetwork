@@ -16,6 +16,9 @@ Project was intended to have educational values. Because of that everything was 
 
 Simple tests were added. Matrix was implemented in a very naive way.
 
+## Future work
+I will use *Accelerate framework* (https://developer.apple.com/documentation/accelerate) to boost computation time.
+
 ## Install and run
 Open *SimpleNeuralNetwork.xcodeproj* in repository folder and launch SimpleNeuralNetwork target.
 
