@@ -1,4 +1,4 @@
-// DeterministicRandom.swift
+// DeterministicRandomTests.swift
 //
 // Copyright © 2017 Mikołaj Styś
 //
@@ -20,36 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import GameKit
+import XCTest
 
-// It is important to have deterministic random as it is useful during neural network debugging
-struct DeterministicRandom {
+class DeterministicRandomTests: XCTestCase {
     
-    private enum Constants {
-        static let max = 1000000
-        static let min = 0
-        static let defaultSeed: UInt64 = 1
+    func testRandomRange() {
+        (0...100).forEach { _ in
+            let value = DeterministicRandom.value
+            XCTAssert(value <= 1 && value >= 0, "Random not in range [0, 1]")
+        }
     }
     
-    private static let instance = DeterministicRandom(seed: Constants.defaultSeed)
-    
-    private let randomGenerator: GKRandomDistribution
-    
-    // Constructor - available primary for testing purposes
-    init(seed: UInt64) {
-        let source = GKMersenneTwisterRandomSource()
-        source.seed = 1
-        randomGenerator = GKRandomDistribution(randomSource: source, lowestValue: Constants.min,
-                                               highestValue: Constants.max)
-    }
-    
-    // Returns random number in range [0, 1]
-    var value: Double {
-        return Double(randomGenerator.nextInt()) / Double(Constants.max)
-    }
-    
-    // Returns random number in range [0, 1]
-    static var value: Double {
-        return instance.value
+    func testDeterminity() {
+        let firstGenerator = DeterministicRandom(seed: 1)
+        let secondGenerator = DeterministicRandom(seed: 1)
+        let firstNumbers = [Double](repeating: 0, count: 100).map { _ in firstGenerator.value }
+        let secondNumbers = [Double](repeating: 0, count: 100).map { _ in secondGenerator.value }
+        XCTAssertEqual(firstNumbers, secondNumbers)
     }
 }
